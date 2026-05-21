@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Journal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Attendance Journal</h1>
+        <a href="/logout" class="logout-btn">Logout</a>
+
+        <form method="GET" class="filters">
+            <input
+                type="text"
+                name="name"
+                placeholder="Search by name"
+                value="{{ search_name }}"
+            >
+
+            <input
+                type="date"
+                name="date"
+                value="{{ filter_date }}"
+            >
+
+            <button type="submit">Filter</button>
+            <a href="/" class="clear-btn">Clear</a>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                {% for record in records %}
+                <tr>
+                    <td>{{ record.name }}</td>
+                    <td>{{ record.date }}</td>
+                    <td>{{ record.time }}</td>
+                    <td>
+                        <form method="POST" action="/update" class="edit-form">
+                            <input type="hidden" name="name" value="{{ record.name }}">
+                            <input type="hidden" name="date" value="{{ record.date }}">
+                            <input type="hidden" name="time" value="{{ record.time }}">
+                    
+                            <select name="status">
+                                <option value="Present" {% if record.status == "Present" %}selected{% endif %}>Present</option>
+                                <option value="Absent" {% if record.status == "Absent" %}selected{% endif %}>Absent</option>
+                            </select>
+                    
+                            <button type="submit">✔</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        {% if records|length == 0 %}
+            <p class="empty">No attendance records found.</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>

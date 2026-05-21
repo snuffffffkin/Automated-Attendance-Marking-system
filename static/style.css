@@ -1,0 +1,169 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters input {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.filters button,
+.clear-btn {
+    padding: 10px 14px;
+    background: #222;
+    color: white;
+    border: none;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.clear-btn {
+    background: #777;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #222;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+tr:hover {
+    background: #f1f1f1;
+}
+
+.badge {
+    padding: 5px 9px;
+    border-radius: 20px;
+    color: white;
+    font-size: 13px;
+}
+
+.badge.in {
+    background: green;
+}
+
+.badge.out {
+    background: crimson;
+}
+
+.empty {
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
+}
+
+.badge.present {
+    background: green;
+}
+
+.badge.absent {
+    background: crimson;
+}
+
+.edit-form {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.edit-form select {
+    padding: 5px;
+}
+
+.edit-form button {
+    padding: 5px 8px;
+    border: none;
+    background: #222;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container {
+    width: 360px;
+    margin: 100px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: 5px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: #555;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-form input {
+    padding: 12px;
+    font-size: 15px;
+}
+
+.login-form button {
+    padding: 12px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.error {
+    color: crimson;
+    margin-top: 15px;
+}
+
+.logout-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 14px;
+    background: crimson;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}

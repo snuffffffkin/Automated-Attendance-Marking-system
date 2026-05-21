@@ -1,0 +1,15 @@
+venv/
+__pycache__/
+*.pyc
+attendance.csv
+.env
+.ipynb_checkpoints/
+known_faces/
+face_id1.py
+face_id.py
+attendance_events.csv
+attendance.py
+lec8.py
+sound1.py
+test1.py
+test_ip.py
